@@ -1,0 +1,247 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Home page SCSS
+ */
+
+.banner-wrap {
+  position: relative;
+  overflow: hidden;
+  .item {
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    img {
+      opacity: 0;
+    }
+  }
+  .owl-item {
+    img {
+      height: 400px;
+      /*min-height: 400px;*/
+      width: 100%;
+      @media (max-width: 767px) {
+        height: 400px;
+        max-width: initial;
+        width: initial;
+      }
+    }
+    .banner-title {
+      @media (max-width: 1200px) {
+        margin-left: -15px;
+      }
+    }
+  }
+  .banner-caption {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    /*max-width: 977px;*/
+    min-width: 977px;
+    /*width: 100%;*/
+    margin-bottom: 70px;
+    /*padding: 20px 0 20px 30px;*/
+    padding: 20px 30px;
+    background-color: rgba(#7BA4D9, .6);
+    font-size: 50px;
+    font-weight: 700;
+    color: $white;
+    @media (max-width: 1200px) {
+      min-width: 100%;
+    }
+    @media (max-width: 767px) {
+      margin-bottom: 50px;
+      padding: 20px;
+      font-size: 40px;
+    }
+  }
+}
+.dashboard-home-blog {
+  .icon-img {
+    padding: 25px 0;
+    @media (max-width: 767px) {
+      padding: 20px 0;
+    }
+    img {
+      height: 100px;
+      width: 100px;
+    }
+  }
+  .text-wrap {
+    max-width: 270px;
+    margin: 0 auto 25px;
+    font-size: $font-size-21;
+    color: #414141;
+    p,
+    span {
+      font-size: $font-size-18;
+    }
+  }
+}
+.testimonial-wrap {
+  .icon-img {
+    margin-bottom: 20px;
+    img {
+      display: inline-block;
+      width: auto;
+      height: 90px;
+      /*background-color: #EBEBEB;*/
+      outline: none;
+      border: none;
+      /*@include border-radius(100%);*/
+    }
+  }
+  .text-wrap {
+    * {
+      color: rgba($blue, .6);
+    }
+  }
+  .text-wrap {
+    p,
+    span {
+      font-size: $font-size-18;
+    }
+    .company-name {
+      font-weight: 700;
+    }
+  }
+  .col {
+    &:hover {
+      .text-wrap {
+        * {
+          color: $blue;
+        }
+      }
+    }
+  }
+  .owl-item.active + .active {
+    .text-wrap {
+      * {
+        color: $blue;
+      }
+    }
+  }
+  .owl-item.active + .active + .active {
+    .text-wrap {
+      * {
+        color: rgba($blue, .6);
+      }
+    }
+    .col {
+      &:hover {
+        .text-wrap {
+          * {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+}
+.blog-wrap {
+  @media (min-width: 768px) {
+    @include flexbox();
+    @include flex-wrap(wrap);
+  }
+  .padding-30 {
+    padding: 40px 30px;
+    @media (max-width: 767px) {
+      padding: 30px 15px;
+    }
+    &.padding-75 {
+      @extend .padding-75;
+    }
+    &.padding-b-0 {
+      @extend .padding-b-0;
+    }
+  }
+  .padding-h-30 {
+    @media (max-width: 767px) {
+      padding: 0 15px;
+    }
+  }
+  h2 {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 18px;
+    font-size: $font-size-26;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  p {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px;
+    color: #414141;
+    font-size: $font-size-18;
+    line-height: 26px;
+    font-weight: 300;
+    @media (max-width: 767px) {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }  
+  }
+  .btn {
+    margin-right: 50px;
+    @media (max-width: 640px) {
+      margin-right: 0;
+    }
+  }
+  /* small content design */
+  .small-content {
+    margin-top: 24px;
+  }
+  /* End */
+  .image {
+    margin-bottom: 26px;
+    &:empty {
+      display: none;
+    }
+    img {
+      max-width: 140px;
+    }
+  }
+  .title-small {
+    h2 {
+      margin: 0;
+      color: $black-41;
+      text-transform: initial;
+      font-size: $font-size-18;
+      font-weight: 500;
+      line-height: 26px;
+    }
+    h2:empty {
+      display: none;
+    }
+  }
+}
+/* Blog design changes */
+.bg-grey {
+  h2 {
+    @extend .text-dark-grey;
+  }
+  .btn {
+    @extend .bg-dark-grey;
+  }
+}
+.bg-light-sky {
+  h2 {
+    @extend .text-blue;
+  }
+  .btn {
+    @extend .bg-blue;
+  }
+}
+.bg-grey-50 {
+  h2 {
+    @extend .text-black-33;
+  }
+  .btn {    
+    @extend .bg-white;
+    @extend .text-dark-grey;
+  }
+}
+/* End */
+

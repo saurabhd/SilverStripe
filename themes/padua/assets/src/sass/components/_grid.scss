@@ -1,0 +1,52 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Grid SCSS.
+ */
+
+
+.grid {
+  display: inline-block;
+  width: 100%;
+  .col {
+    float: left;
+  }
+  &.grid-2 {
+    .col {
+      min-height: 435px;
+      width: 50%;
+      &.width-full {
+        min-height: auto;
+        width: 100%;
+      }
+      @media (max-width: 767px) {
+        min-height: 0;
+        width: 100%;
+      }
+    }
+  }
+  &.grid-3 {
+    .col {
+      width: 33.33%;
+      @media (max-width: 767px) {
+        width: 100%;
+        margin: 0 0 20px;
+      }
+    }
+  }
+  &.grid-4 {
+    .col {
+      margin-right: 30px;
+      @include calc('width', '25% - 22.5px');
+      /*width: 25%;*/
+      &:last-child {
+        margin-right: 0;
+      }
+      @media (max-width: 767px) {
+        width: 100%;
+        margin: 0 0 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,277 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * paraplanning page SCSS
+ */
+
+/* paraplanning page */
+.upper-table-title {
+  margin-bottom: 25px;
+  color: $dark-grey;
+  font-size: $font-size-26;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.upper-table-content {
+  margin-bottom: 30px;
+  font-size: $font-size-18;
+  font-weight: 300;
+  p {
+    font-size: $font-size-18;
+  }
+}
+.btn-200 {
+  .btn {
+    min-width: 200px;
+    &:first-child {
+      margin-right: 50px;
+    }
+    @media (max-width: 640px) {
+      margin: 0 0 10px;
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+.below-table-btn {
+  margin-top: 10px;
+  /*@extend .btn-200;*/
+  .btn {
+    margin-bottom: 10px;
+  }
+  .btn-mw-150 {
+    min-width: 150px;
+  }
+}
+.btn-mw-150 {
+  min-width: 150px;
+}
+/* End*/
+/*Contact page design*/
+.content-left {
+  float: left;
+  width: 50%;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+  &.grid {
+    &.grid-2 {
+      .col {
+        width: 100%;
+      }
+    }  
+  }
+}
+.contact-form {
+  float: left;
+  display: inline-block;
+  width: 50%;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+  /*.lastUnit {*/
+    .userform {
+      .FormHeading {
+        margin: 0 0 18px;
+        font-size: 26px;
+        font-weight: 700;
+        text-transform: uppercase;
+        @extend .text-blue;
+      } 
+      .left {
+        margin-bottom: 3px;
+        border: none;
+        font-size: $font-size-18;
+        font-weight: 300;
+        line-height: 26px;
+      }
+      @extend .btn-200;
+      .checkboxset {
+        legend {
+          line-height: normal;
+        }
+        .checkbox {
+          display: inline-block;
+        }
+        label {
+          @extend .left;
+        }
+      }
+      .action {
+        margin-top: 20px;
+        @extend .btn;
+        @extend .bg-blue;
+      }
+    } 
+  /*}*/
+}
+/* Static pages design */
+.static-pages {
+  .blog-wrap {
+    h1 {
+      margin-top: 0;
+      font-size: $font-size-50;
+      font-weight: 700;
+      text-align: left;
+    }
+  }
+  h2 {
+    margin: 0 0 5px;
+    font-size: $font-size-21;
+    @extend .text-blue;
+  }
+  .title-center {
+    h1 {
+      display: inline-block;
+      width: 100%;
+    }
+    h2 { text-align: left; }
+  }
+  ol,
+  ul {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    font-size: $font-size-18;
+    font-weight: 300;
+    li {
+      line-height: 26px;
+      /*margin-bottom: 5px;*/
+    }
+  }
+  a {
+    color: $black-41;
+    line-height: 26px;
+    vertical-align: middle;
+  }
+}
+/* End */
+
+/*table designs*/
+/* Table-design */
+.table-responsive {
+  @extend .border-dark-grey;
+  .table-bordered {
+    @extend .border-dark-grey;
+    thead,
+    tbody {
+      td {
+        font-size: 18px;
+        font-weight: 300;
+        vertical-align: middle;
+        @extend .border-dark-grey;
+      }
+    }
+  }
+}
+/* paraplanning table design*/
+.table.paraplanning-tab {
+  /*Table-header design*/
+  thead {
+    td {
+      padding: 15px;
+      text-align: center;
+      border-bottom: none;
+      font-size: $font-size-18;
+      font-weight: bold;
+      &:last-child {
+        padding: 15px 40px;
+        @extend .bg-blue;
+        @extend .text-white;
+      }
+      &:nth-last-child(2) {
+        padding: 15px 40px;
+        @extend .bg-dark-grey;
+        @extend .text-white;
+      }
+    }
+  }
+  /*End*/
+  /*Table body design*/
+  tbody {
+    tr {
+      td {
+        padding: 12px 10px;
+        h3,
+        p {
+          font-size: 18px;
+          font-weight: 300;
+        }
+        h3 {
+          margin: 0;
+          font-weight: 700;
+        }
+        &:first-child {
+          min-width: 100px;
+          text-align: center;
+          img {
+            height: 60px;
+            max-width: 60px;
+          }
+        }
+        &:nth-last-child(2),
+        &:last-child {
+          text-align: center;
+          img {
+            height: 30px;
+          }
+        }
+        &:nth-last-child(2) {
+          @extend .bg-grey;
+        }
+        &:last-child {
+          @extend .bg-light-sky;
+        }
+      }
+    }
+  }
+  /* End */
+}
+/* End */
+
+/*Transition service table*/
+.table.transition-table {
+  tbody {
+    td {
+      padding: 10px 20px;
+      &:first-child {
+        min-width: 100px;
+        text-align: center;
+        font-size: $font-size-50;
+        font-weight: bold;
+      }
+      &:nth-last-child(2) {
+        max-width: 230px;
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+  } 
+}
+/* End */
+
+/* Transition Management */
+.transition-management {
+  .table-responsive {
+    border: none;
+    h3,
+    p {
+      color: $black-41;
+    }
+    h3 {
+      margin: 15px 0 8px;
+      font-size: 24px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 300;
+    }
+  } 
+}
+/* End */

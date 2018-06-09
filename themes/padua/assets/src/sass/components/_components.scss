@@ -1,0 +1,273 @@
+/*
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Components design.
+ */
+
+.bg-black {
+  background-color: $black; 
+}
+.bg-sky {
+  background-color: $sky;
+}
+.bg-blue {
+  background-color: $blue;
+}
+.bg-grey-50 {
+  background-color: $grey-50;
+}
+.bg-sky {
+  h2 {
+    color: $blue;
+  }
+  .btn {
+    background-color: $blue;
+  }
+}
+.bg-dark-grey {
+  background-color: $dark-grey;
+}
+.bg-grey {
+  background-color: $grey;
+}
+.bg-light-sky {
+  background-color: $light-sky;
+}
+.bg-white {
+  background-color: $white;
+}
+.bg-eb {
+  background-color: #EEECEB;
+}
+.bg-white {
+  background-color: $white;
+}
+
+
+.text-dark-grey {
+  color: $dark-grey;
+}
+.text-blue {
+  color: $blue;
+}
+.text-black-33 {
+  color: $black-33;
+}
+.text-white {
+  color: $white;
+  a {
+    color: $white;
+    &:hover {
+      color: $white;
+      text-decoration: none;
+      opacity: .9;
+    }
+  }
+}
+.bg-grey-50 {
+  .bg-white {
+    color: $dark-grey;
+  }
+  h2 {
+    color: $white;
+  }
+}
+/*Borders*/
+.border-tl {
+  border-top: 1px solid $grey;
+  border-left: 1px solid $grey;
+  @media (max-width: 767px) {
+    border: none;
+  }
+}
+.border-dark-grey {
+  border-color: $dark-grey;
+}
+/*End*/
+
+.padding-0 {
+  padding: 0 !important;
+}
+.padding-h-60 {
+  padding: 60px 30px;
+  @media (max-width: 767px) {
+    padding: 30px 15px;
+  }
+}
+.padding-30 {
+  padding: 30px 30px;
+  @media (max-width: 767px) {
+    padding: 30px 15px;
+  }
+}
+.padding-40 {
+  padding: 40px;
+}
+.padding-h-30 {
+  padding: 0 30px;
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+}
+.padding-v-30 {
+  padding: 30px 0;
+  @media (max-width: 767px) {
+    padding: 15px 0;
+  }
+}
+.padding-b-60 {
+  padding-bottom: 60px;
+  @media (max-width: 767px) {
+    padding-bottom: 30px;
+  }
+}
+.padding-75 {
+  padding: 75px 75px 30px 75px;
+  @media (max-width: 767px) {
+    padding: 30px 15px;
+  }
+}
+.padding-b-0 {
+  padding-bottom: 0;
+}
+@media (min-width: 767px) {
+  .padding-t-10 {
+    padding-top: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .padding-xs-0 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+/* Text center */
+.title-center {
+  h2 {
+    text-align: center;
+  }
+  .btn {
+    display: inline-block;
+  }
+}
+/* End */
+/* Button center */
+.btn-center {
+  .btn {
+    text-align: center;
+  }
+}
+/* End */
+/* content center */
+.center-content {
+  text-align: center;
+  font-size: $font-size-21;
+  font-weight: 300;
+  img {
+    margin-bottom: 20px;
+  }
+  h3 {
+    margin: 0 0 5px;
+    font-size: $font-size-24;
+    font-weight: 300;
+    text-transform: capitalize;
+  }
+}
+/* End */
+/* Icon design */
+.icon {
+  vertical-align: middle;
+  &::before {
+    display: inline-block;
+    height: 26px;
+    width: 26px;
+    margin-right: 5px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: $white;
+    font-size: 15px;
+    vertical-align: middle;
+    content: '';
+  }
+}
+.icon-right-arrow {
+  &::before {
+    margin-right: 0;
+    line-height: 24px;
+    content: '>';
+  }
+}
+.icon-clock {
+  &::before {
+    background-image: url('../images/clock.svg');
+  }
+}
+.icon-tag {
+  &::before {
+    background-image: url('../images/tag.svg');
+  }
+}
+.icon-email {
+  word-wrap: break-word;
+  padding-right: 30px;
+  &::before {
+    background-image: url('../images/email.svg');
+  }
+}
+.icon-phone {
+  &::before {
+    background-image: url('../images/call.svg');
+  }
+}
+.icon-address {
+  &::before {
+    background-image: url('../images/location.svg');
+  }
+}
+/* End Icon design*/
+
+/* Social media icons design */
+.social-icon {
+  li {
+    display: inline-block;
+    padding-right: 30px; 
+    a {
+      display: inline-block;
+      height: 32px;
+      width: 32px;
+      background-image: url('../images/linked-in.svg');
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-size: 0;
+    }
+    .icon-fb {
+      background-image: url('../images/fb.svg');
+    }
+    .icon-twitter {
+      background-image: url('../images/twitter.svg');
+    }
+  } 
+} 
+/* End */
+/*Image design for grid full width*/
+.cover-img {
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ @media (max-width: 767px) {
+   background-position: center top;
+ }
+  img {
+    opacity: 0;
+  }
+}
+/* End */
+
+/* Error message */
+.message.required {
+  color: red;
+}
+/* End */

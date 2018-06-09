@@ -1,0 +1,185 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Header SCSS.
+ */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  display: inline-block;
+  min-height: 140px;
+  width: 100%;
+  margin-bottom: 0;
+  background-color: $white;
+  @media (max-width: 767px) {
+    min-height: 60px;
+  }
+  .main-header {
+    padding: 25px 0;
+    @media (max-width: 767px) {
+      padding: 15px 5px;
+    }
+  }
+  .navbar-default {
+    float: right;
+    @include calc('width', '100% - 210px');
+    margin-bottom: 0;
+    border: none;   
+    background-color: transparent;
+    @media (max-width: 1024px) {
+      position: absolute;
+      z-index: 9;
+      /*top: 98px;*/
+      top: 140px;
+      left: 0;
+      width: 100%;
+      background-color: $white;
+    }
+    @media (max-width: 767px) {
+      top: 60px;
+    }
+  }
+  .navbar-collapse {
+    padding: 0;
+  }
+  ul.navbar-nav {
+    float: right;
+    li {
+      padding: 15px 20px; 
+      a {
+        padding: 0;
+        color: $black-25;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        &:hover,
+        &:focus,
+        &:active,
+        &:focus:active,
+        &.current {
+          color: $blue;
+        }
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+    @media (max-width: 1024px) {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      li {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Horizontal Menu */
+.horizontal-menu {
+  li {
+    display: inline-block;
+    a {
+      color: $dark-grey;
+      font-size: $font-size-16;
+      &:hover,
+      &:focus,
+      &:active,
+      &:focus:active {
+        color: $black;
+      }
+    }
+  }
+}
+
+/* Top header section */
+.top-header {
+  display: inline-block;
+  width: 100%;
+  @media (max-width: 767px) {
+    display: none;
+  }
+  ul {
+    margin-bottom: 0;
+    li {
+      padding: 10px 16px;
+      &:last-child {
+        padding-right: 0;
+      }
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.brand-name {
+  display: inline-block;
+  img {
+    max-width: 210px;
+    @media (max-width: 767px) {
+      max-width: 130px;
+    }
+  }
+}
+.navbar {
+  display: inline-block;
+  min-height: 0;
+}
+.navbar-toggle {
+  margin: 11px 0 0;
+  padding: 4px 6px;
+  @media (max-width: 767px) {
+    margin-top: 0;
+  }
+  .icon-bar {
+    width: 25px;
+    height: 4px;
+    background-color: $blue;
+  }
+}
+/* Sticky header design */
+/*.sticky-header {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+  }
+}*/
+/* End Sticky header design */
+
+/* Added margin for sticky header */
+.content-container {
+  margin-top: 140px;
+  @media (max-width: 767px) {
+    margin-top: 60px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+/* .navbar-collapse.collapse { display: none !important; }
+ .navbar-collapse.collapse.in { display: block !important; }
+ .navbar-header .collapse,
+ .navbar-toggle { display:block !important; }
+ .navbar-header { float:none; }*/
+
+  .navbar-collapse {
+    border-top: 1px solid $grey;
+    &.collapse {
+      display: none !important;
+      &.in {
+        display: block !important;
+      }
+    }
+  }
+  .navbar-toggle { display:block !important; }
+}
